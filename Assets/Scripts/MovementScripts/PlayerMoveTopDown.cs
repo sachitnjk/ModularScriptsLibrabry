@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerMoveTopDown : MonoBehaviour
 {
 	private PlayerInput playerInput;
 	private InputAction moveAction;
