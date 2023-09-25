@@ -248,10 +248,8 @@ MonoBehaviour:
   rotationOffset: {x: 60.801895, y: 0, z: 0}
   sensitivity: 0.01
   distance: 3
-  minVerticalAngle: 0
-  maxVerticalAngle: 0
-  minHorizontalAngle: 0
-  maxHorizontalAngle: 0
+  camVerticalViewAngle: 0
+  camHorizontalViewAngle: 0
 --- !u!81 &493748825
 AudioListener:
   m_ObjectHideFlags: 0

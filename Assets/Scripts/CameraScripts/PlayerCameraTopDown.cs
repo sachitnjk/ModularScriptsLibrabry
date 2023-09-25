@@ -16,10 +16,9 @@ public class PlayerCameraTopDown : MonoBehaviour
 	[SerializeField] private float distance;
 
 	[Header("Camera alignment angles")]
-	[SerializeField] private float minVerticalAngle;
-	[SerializeField] private float maxVerticalAngle;
-	[SerializeField] private float minHorizontalAngle;
-	[SerializeField] private float maxHorizontalAngle;
+	[SerializeField] private float camVerticalViewAngle;
+	[SerializeField] private float camHorizontalViewAngle;
+
 
 	private PlayerInput playerInput;
 	private InputAction lookAction;
@@ -27,9 +26,20 @@ public class PlayerCameraTopDown : MonoBehaviour
 	private Vector2 _rotation;
 	private float _currentDistance;
 
+	private float minVerticalAngle;
+	private float maxVerticalAngle;
+	private float minHorizontalAngle;
+	private float maxHorizontalAngle;
+
 	private void Start()
 	{
 		playerInput = InputProvider.GetPlayerInput();
+
+		minVerticalAngle = -camVerticalViewAngle;
+		maxVerticalAngle = camVerticalViewAngle;
+
+		minHorizontalAngle = -camHorizontalViewAngle;
+		maxHorizontalAngle = camHorizontalViewAngle;
 	}
 
 	private void LateUpdate()
