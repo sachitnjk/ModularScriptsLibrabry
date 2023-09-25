@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
-public class FPSMovement : MonoBehaviour
+public class PlayerMovementFP : MonoBehaviour
 {
 	private PlayerInput playerInput;
 	private InputAction moveAction;
