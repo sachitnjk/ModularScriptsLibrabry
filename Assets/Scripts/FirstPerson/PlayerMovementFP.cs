@@ -43,5 +43,7 @@ public class PlayerMovementFP : MonoBehaviour
 		moveDirection = transform.forward * moveInput.y + transform.right * moveInput.x;
 
 		playerCharController.Move(moveDirection.normalized * moveSpeed * Time.deltaTime);
+
+		//Add animator functionality here if needed
 	}
 }

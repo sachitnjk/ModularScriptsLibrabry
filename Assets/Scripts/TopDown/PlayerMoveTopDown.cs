@@ -54,5 +54,7 @@ public class PlayerMoveTopDown : MonoBehaviour
 		Vector3 move = new Vector3(moveDirection.x, 0.0f, moveDirection.y);
 
 		playerCharController.Move(move * moveSpeed * Time.deltaTime);
+
+		//Add animator functionality here if needed
 	}
 }
