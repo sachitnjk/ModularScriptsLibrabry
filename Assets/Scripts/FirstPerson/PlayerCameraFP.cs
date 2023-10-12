@@ -11,7 +11,6 @@ public class PlayerCameraFP : MonoBehaviour
 	[Header("Camera Attributes")]
 	[Range(0.1f, 1f)] [SerializeField] private float camSensitivity;
 	[SerializeField] private float camVerticalRotationClampAngle;
-	//[SerializeField] private float camHorizontalRotationClampAngle;
 
 	private PlayerInput playerInput;
 	private InputAction lookAction;
@@ -21,7 +20,6 @@ public class PlayerCameraFP : MonoBehaviour
 
 	private float verticalRotation = 0f;
 	private float minVerticalCamRotation, maxVerticalCamRotation;
-	//private float minHorizontalCamRotation, maxHorizontalCamRotation;
 
 	private void Start()
 	{
@@ -37,8 +35,6 @@ public class PlayerCameraFP : MonoBehaviour
 
 		minVerticalCamRotation = -camVerticalRotationClampAngle;
 		maxVerticalCamRotation = camVerticalRotationClampAngle;
-		//minHorizontalCamRotation = -camHorizontalRotationClampAngle;
-		//maxHorizontalCamRotation = camHorizontalRotationClampAngle;
 
 	}
 
@@ -52,7 +48,6 @@ public class PlayerCameraFP : MonoBehaviour
 		lookInput = lookAction.ReadValue<Vector2>();
 
 		camRotation.y += lookInput.x * camSensitivity;
-		//camRotation.y = Mathf.Clamp(camRotation.y, minHorizontalCamRotation, maxHorizontalCamRotation);
 
 		verticalRotation -= lookInput.y * camSensitivity;
 		verticalRotation = Mathf.Clamp(verticalRotation, minVerticalCamRotation, maxVerticalCamRotation);
